@@ -655,7 +655,14 @@ ol, ul {
 
 .container {
     position: relative;
-  
+
+    .food-container {
+      #thai {
+        font-size: 35px;
+        font-weight: bold;
+      }
+    }
+
     .card {
       margin-bottom: 20px;
       width: 100%;
