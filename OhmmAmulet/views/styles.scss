@@ -8,11 +8,17 @@ body {
   font-family: 'Krub', sans-serif;
 }
 
+
+
+
 :root{
   --yellow:#fec326;
   --red:#af1836;
 }
 /* วิธีใช้ตัวแปร  var(--red) */
+
+
+
 
 #header {
   background-color: #af1836;
@@ -47,48 +53,28 @@ img {
   position: relative;
 }
 
-/* เมนูนาฟบา */
 
-/* เมนูนาฟบา */
-a.text{
-  text-decoration:none;
+/* NavBar Menu */
+a.text {
+  text-decoration: none;
   color: white;
   border: 1px;
   border-bottom-style: solid;
+
+  &:hover {
+    color: #fec326;
+    font-size: 18px;
+    border: 4px;
+    border-bottom-style: solid;
+    /* transition: 0.4s; */
+    text-decoration: none;
+    transform: scale(1.2);
+    transition: 0.3s;
+  }
 }
 
-.forgot{
-  color:#f6b415;
-  transition: 0.3s;
-  
-}
 
-.forgot b:hover{
-  color:#E6c66d;
-  transition: 0.3s;
-  text-decoration:none;
-}
 
-a.text:hover {
-  color: #fec326;
-  font-size: 18px;
-  border: 4px;
-  border-bottom-style: solid;
-/*   transition: 0.4s; */
-  text-decoration: none;
-  transform: scale(1.2);
-  transition: 0.3s;
-}
-
-/* .text:hover {
-  color: #fec326;
-  font-size: 18px;
-  border: 4px;
-  border-bottom-style: solid; */
-/*   transition: 0.4s; */
-/*   transform: scale(1.2);
-  transition: 0.3s;
-}  */
 
 .text:active{
     border-bottom-style: solid;
@@ -158,19 +144,36 @@ a.text:hover {
   overflow: hidden;
   
 }
-.forgot{
-  color: #fec326;
+
+
+.forgot {
   border: none;
   padding: 0px;
-  background-color:white;
+  background-color: white;
+  color:#f6b415;
+  transition: 0.3s;
+
+  &:hover {
+    color: yellow;
+  }
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+
+  b:hover {
+    color:#E6c66d;
+    transition: 0.3s;
+    text-decoration:none;
+  }
+  
 }
-.forgot:hover{
-  color: yellow;
-}
-.forgot:focus{
-   border: none;
-  outline: none;
-}
+
+
+
+
+
 .button-solid:focus {
     border: none;
     outline: none;
@@ -562,13 +565,34 @@ ol, ul {
     padding: 0;
 }
 #footer {
-/*   position: fixed;
-  bottom: 0; */
   width: 100%;
   height: 45%;            /* Footer height */
 }
 
-/* footer */
+
+
+
+.insideContainer {
+  width: 200px;
+  position: fixed;
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 1000;
+
+  p {
+    font-size: 20px;
+    color: rgb(205, 66, 80);
+  }
+
+  a {
+    font-size: 20px;
+    &:hover {
+      color: rgb(216, 70, 70);
+    }
+  }
+}
+
+
 
 
 /* รถเข็น */
@@ -580,64 +604,38 @@ ol, ul {
 
 }
 
-.insideContainer {
-    width: 200px;
-    position: fixed;
-    display: flex;
-    justify-content: space-evenly;
-    z-index: 1000;
-    /* background-color: red; */
-}
 
 .wrappp {
-/*     background-color: rgb(255, 255, 255); */
-   position: relative;
+  position: relative;
   background-color: #af1836;
-  box-shadow:4px 10px 22px -9px black;
-    font-size: 30px;
-    padding: 5px;
-    border-radius: 4px;
-  width:43px;
-  cursor:pointer;
-}
-/* .wrapp {
-    background-color: rgb(255, 255, 255);
-    padding: 11px 17px;
-    width: 50px;
-    height: 45px;
-    border-radius: 100%;
-    box-shadow: 4px 6px 22px -9px black;
-    cursor: pointer;
-  position: absolute;
-  right: 90px;
-  text-decoration: none;
-} */
-.insideContainer p{
-    font-size: 20px;
-    color: rgb(205, 66, 80);
-}
+  box-shadow: 4px 10px 22px -9px black;
+  font-size: 30px;
+  padding: 5px;
+  border-radius: 4px;
+  width: 43px;
+  cursor: pointer;
 
-.insideContainer a{
-    font-size: 20px;
-}
-
-.insideContainer a:hover{
-    color: rgb(216, 70, 70);
-}
-
-.wrappp:hover{
-    transform: scale(1.055);
-  text-decoration: none;
-}
-/* .wrapp:hover{
+  &:hover {
     transform: scale(1.055);
     text-decoration: none;
-} */
+  }
+}
 
 
 .card {
   position: relative;
+  &:hover {
+    transition: 0.5s;
+    box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
 }
+
+
+
+
+
+
 
 .title_stone{
   font-weight: 1000;
@@ -718,12 +716,6 @@ ol, ul {
   
 
 
-.card:hover {
-  transition: 0.5s;
-  box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.2);
-  cursor: pointer;
-}
-
 
 
 .fa-plus{
@@ -737,22 +729,18 @@ ol, ul {
   border-radius: 4px 0px 4px 0px;
   position: absolute;
   background-color: #5d5c5c;
+
+  &:hover {
+    transition: 0.5s;
+    color: white;
+    background-color: #A63F03;
+    cursor: pointer;
+  }
+
 }
 
-.fa-plus:hover{
-  transition: 0.5s;
-  color: white;
-  background-color: #A63F03;
-  cursor: pointer;
-}
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
+
 
 .sidenav {
   height: 100%;
@@ -765,6 +753,13 @@ ol, ul {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
 }
 
 /* รถเข็นนนน */
@@ -774,7 +769,6 @@ ol, ul {
 
 .title_stone3 {
   padding-left: 5px;
-  
   font-size: 200%;
   background-color: white;
   border-left: 12px solid #fec326;
@@ -882,89 +876,100 @@ a:hover{
   background: whitesmoke;
   border-radius: 3px;
 
+  &:hover {
+    background-color: #af1836;
+    color: white;
+    transition: 0.2s;
+  }
 }
 
-.add_button:hover{
-  background-color: #af1836;
-  color: white;
-  transition: 0.2s;
-}
+
 /* ปุ่มชำระเงิน */
-#success_tic .page-body{
-  max-width:300px;
-  background-color:#FFFFFF;
-  margin:10% auto;
-}
- #success_tic .page-body .head{
-  text-align:center;
-}
-/* #success_tic .tic{
-  font-size:186px;
-} */
-#success_tic .close{
-      opacity: 1;
+#success_tic {
+  .page-body {
+    max-width:300px;
+    background-color:#FFFFFF;
+    margin:10% auto;
+
+    .head {
+      text-align:center;
+    }
+  }
+
+  .close {
+    opacity: 1;
     position: absolute;
     right: 0px;
     font-size: 30px;
     padding: 3px 15px;
-  margin-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  .checkmark-circle {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+
+    .background {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: #1ab394;
+      position: absolute;
+    }
+
+    .checkmark {
+      border-radius: 5px;
+    }
+
+    .checkmark.draw::after {
+      -webkit-animation-delay: 300ms;
+      -moz-animation-delay: 300ms;
+      animation-delay: 300ms;
+      -webkit-animation-duration: 1s;
+      -moz-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-timing-function: ease;
+      -moz-animation-timing-function: ease;
+      animation-timing-function: ease;
+      -webkit-animation-name: checkmark;
+      -moz-animation-name: checkmark;
+      animation-name: checkmark;
+      -webkit-transform: scaleX(-1) rotate(135deg);
+      -moz-transform: scaleX(-1) rotate(135deg);
+      -ms-transform: scaleX(-1) rotate(135deg);
+      -o-transform: scaleX(-1) rotate(135deg);
+      transform: scaleX(-1) rotate(135deg);
+      -webkit-animation-fill-mode: forwards;
+      -moz-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+
+    .checkmark::after {
+      opacity: 1;
+      height: 75px;
+      width: 37.5px;
+      -webkit-transform-origin: left top;
+      -moz-transform-origin: left top;
+      -ms-transform-origin: left top;
+      -o-transform-origin: left top;
+      transform-origin: left top;
+      border-right: 15px solid #fff;
+      border-top: 15px solid #fff;
+      border-radius: 2.5px !important;
+      content: '';
+      left: 35px;
+      top: 80px;
+      position: absolute;
+    }
+  }
+
 }
-#success_tic .checkmark-circle {
-  width: 150px;
-  height: 150px;
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-}
-.checkmark-circle .background {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: #1ab394;
-  position: absolute;
-}
-#success_tic .checkmark-circle .checkmark {
-  border-radius: 5px;
-}
-#success_tic .checkmark-circle .checkmark.draw:after {
-  -webkit-animation-delay: 300ms;
-  -moz-animation-delay: 300ms;
-  animation-delay: 300ms;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: ease;
-  -moz-animation-timing-function: ease;
-  animation-timing-function: ease;
-  -webkit-animation-name: checkmark;
-  -moz-animation-name: checkmark;
-  animation-name: checkmark;
-  -webkit-transform: scaleX(-1) rotate(135deg);
-  -moz-transform: scaleX(-1) rotate(135deg);
-  -ms-transform: scaleX(-1) rotate(135deg);
-  -o-transform: scaleX(-1) rotate(135deg);
-  transform: scaleX(-1) rotate(135deg);
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-#success_tic .checkmark-circle .checkmark:after {
-  opacity: 1;
-  height: 75px;
-  width: 37.5px;
-  -webkit-transform-origin: left top;
-  -moz-transform-origin: left top;
-  -ms-transform-origin: left top;
-  -o-transform-origin: left top;
-  transform-origin: left top;
-  border-right: 15px solid #fff;
-  border-top: 15px solid #fff;
-  border-radius: 2.5px !important;
-  content: '';
-  left: 35px;
-  top: 80px;
-  position: absolute;
-}
+
+
+
 
 @-webkit-keyframes checkmark {
   0% {
