@@ -6,6 +6,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Krub', sans-serif;
+  zoom: 80%;
 }
 
 
@@ -23,7 +24,7 @@ body {
 #header {
   background-color: #af1836;
   width: 100%;
-  height: 15vh;
+  // height: 15vh;
   text-align: center;
   position: relative;
   left: 0px;
@@ -201,13 +202,7 @@ a.text {
   z-index: -1;
 }
 
-.symbols-right-center{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
+
       
 .symbols-left {
   position: relative;
@@ -226,6 +221,16 @@ a.text {
   background-color: #af1836;
   box-shadow: 4px 6px 22px -9px black;
   border-radius: 0px 0px 10px 0px;
+
+  .symbols-right-center{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+
 }
 /* รถเข็น */
 .cartAmount{
@@ -680,15 +685,14 @@ ol, ul {
       .content {
         .productName {
           font-size: 18px;
-          margin-bottom: 48px;
-          margin-top: -5px;
+          margin-bottom: 25px;
+          margin-top: 12px;
           margin-left: 10px;
         }
   
         .type {
           display: flex;
-          margin-top: 8px;
-  
+          padding-top: 5px;
           .each {
             margin-left: 10px;
             padding: 4px;
@@ -701,6 +705,7 @@ ol, ul {
         .price_cart_like {
           display: flex;
           justify-content: space-around;
+          margin-top: 6px;
         }
   
         .price {
