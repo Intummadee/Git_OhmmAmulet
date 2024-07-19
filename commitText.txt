@@ -4,3 +4,10 @@
 
 🧪 Doing Feature : Force Login
 
+✔️  Complete Feature : Authen
+
+📝 Update README.md
+
+🛠️ Fix Bug Name 
+
+❓ Found Bug Name : 
