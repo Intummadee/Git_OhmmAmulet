@@ -9,7 +9,9 @@ body {
   zoom: 80%;
 }
 
-
+$primary-color: #fec326;
+$secondary-color: #af1836;
+$third-color: #D0021B;
 
 
 :root{
@@ -28,6 +30,7 @@ body {
   text-align: center;
   position: relative;
   left: 0px;
+  padding-bottom: 20px;
 }
 
 img {
@@ -395,15 +398,15 @@ a.text {
 .footer_area {
     background-color: #2c2c2c;
     position: relative;
-    z-index: 1;
     overflow: hidden;
     -webkit-box-align: 0 8px 48px 8px rgba(47, 91, 234, 0.175);
     box-shadow: 0 8px 48px 8px rgba(47, 91, 234, 0.175);
     padding:60px;
-}
-.footer_area .row {
-    margin-left: -25px;
-    margin-right: -25px;
+    z-index: 1;
+    .row {
+      margin-left: -25px;
+      margin-right: -25px;  
+    }
 }
 
 
@@ -504,6 +507,7 @@ a.text {
     margin-bottom: 1rem;
     display: block;
     font-size: 1rem;
+    cursor: pointer;
 }
 .single-footer-widget .footer_menu li a:hover,
 .single-footer-widget .footer_menu li a:focus {
@@ -653,9 +657,32 @@ ol, ul {
   /*  top-left corner,top-right corner, bottom-right corner,bottom-left corner */
 }
 
+
+#TopDiv {
+  background-color: transparent;
+  // width: 100%;
+  height: auto;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  span {
+    padding: 10px 15px;
+    margin-right: 30px;
+    width: auto;
+    background-color: $third-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h5 {
+      font-weight: bold;
+    }
+  }
+
+}
+
 .container {
     position: relative;
-
     .food-container {
       #thai {
         font-size: 35px;
@@ -667,6 +694,7 @@ ol, ul {
       margin-bottom: 20px;
       width: 100%;
       background-color: whitesmoke;
+      
   
       .imgBx {
         position: relative;
@@ -682,6 +710,7 @@ ol, ul {
           height: 100%;
           object-fit: cover;
           transition: 0.5s;
+          max-height: 400px;
         }
   
         &:hover img {

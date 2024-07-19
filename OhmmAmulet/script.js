@@ -46,3 +46,15 @@ $('#myModal').on('shown.bs.modal', function() {
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
   }
+
+
+
+
+
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
