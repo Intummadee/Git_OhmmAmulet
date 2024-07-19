@@ -52,9 +52,41 @@ $('#myModal').on('shown.bs.modal', function() {
 
 
 
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+
+
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+
+
+const openModal = function () {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+
+
+const closeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+modal.addEventListener("click" , function(event) {
+  if (event.target === modal) {
+    closeModal();
   }
+});
+
+
+const openModalBtn = document.querySelector(".btn-open");
+openModalBtn.addEventListener("click", openModal);
+
+
+const closeModalBtn = document.querySelector(".btn-close");
+closeModalBtn.addEventListener("click", closeModal);
+
