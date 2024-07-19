@@ -487,6 +487,9 @@ a.text {
 .single-footer-widget {
     position: relative;
     z-index: 1;
+    h5 {
+      font-weight: bold;
+    }
 }
 .single-footer-widget .copywrite-text a {
     color: whitesmoke;
@@ -522,23 +525,30 @@ a.text {
 .footer_social_area {
     position: relative;
     z-index: 1;
+    h5 {
+      font-weight: bold;
+      color: red;
+    }
+    a {
+      border-radius: 50%;
+      height: 40px;
+      text-align: center;
+      width: 40px;
+      display: inline-block;
+      background-color: #b90017;
+      line-height: 40px;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      margin-right: 10px;
+      color: whitesmoke;
+
+      i {
+        line-height: 36px;
+      }
+  }
+
 }
-.footer_social_area a {
-    border-radius: 50%;
-    height: 40px;
-    text-align: center;
-    width: 40px;
-    display: inline-block;
-    background-color: #b90017;
-    line-height: 40px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    margin-right: 10px;
-    color: whitesmoke;
-}
-.footer_social_area a i {
-    line-height: 36px;
-}
+
 h5, h6{
   color: white;
 }
@@ -667,12 +677,13 @@ ol, ul {
   justify-content: flex-end;
   cursor: pointer;
   span {
-    padding: 10px 15px;
+    padding: 16px 14px;
     margin-right: 30px;
     width: auto;
     background-color: $third-color;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     h5 {
       font-weight: bold;
@@ -743,7 +754,7 @@ ol, ul {
           justify-content: space-around;
           margin-top: 40px;
         }
-  
+        
         .price {
           bottom: 8px;
           left: 10px;

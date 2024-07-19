@@ -1,7 +1,11 @@
 # Git_OhmmAmulet
  
 
+- Html Css Javascript 
+- Sass
+- LocalStorage
 
+Ref : https://www.mcdonalds.co.th/mcDelivery/category/burger
 
 
 ```
