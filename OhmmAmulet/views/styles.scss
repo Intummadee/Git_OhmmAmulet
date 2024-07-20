@@ -13,6 +13,11 @@ $primary-color: #fec326;
 $secondary-color: #af1836;
 $third-color: #D0021B;
 
+%box {
+  box-shadow: -5px 6px 22px -9px black;
+  border-radius: 10px;
+}
+
 
 :root{
   --yellow:#fec326;
@@ -1232,11 +1237,10 @@ button {
 
 
 .basket {
+  @extend %box;
   position: absolute;
-  transform: translateX(32rem);
+  transform: translateX(50vw);
   z-index: 100;
-  box-shadow: -5px 6px 22px -9px black;
-  border-radius: 10px;
   padding: 12px;
   cursor: pointer;
 
@@ -1249,6 +1253,57 @@ button {
     padding: 3px 4px;
     border-radius: 4px;
     font-weight: bold;
+  }
+
+}
+
+
+#list {
+  margin: 2.5rem 0rem;
+
+  #box {
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      @extend %box;
+      height: 200px;
+      padding: 1rem;
+
+    }
+
+    .rightSideBox {
+      margin-left: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 200px;
+
+      #priceProductBox {
+        // margin-left: 1rem;
+        background-color: black;
+        color: white;
+        border-radius: 15px;
+        padding: 8px;
+        font-size: 20px;
+        display: inline-block;
+      }
+
+      #calculateDiv {
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+        padding-top: 10px;
+      }
+
+      #sumPrice {
+        font-weight: bold;
+      }
+
+    }
   }
 
 }

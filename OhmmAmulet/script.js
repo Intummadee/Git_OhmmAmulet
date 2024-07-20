@@ -94,24 +94,69 @@ openModalBtn.addEventListener("click", openModal);
 var arrayProduct = []
 var numberProduct = 0;
 
+
+// เพื่อถ้า refresh หน้า arrayของทั้งสองก็จะยังเหมือนกัน
+var arrayProductLocal = JSON.parse(localStorage.getItem('arrayProduct')) || [];
+arrayProduct = [...arrayProductLocal]
+
+
+// นับจำนวน product จาก localStorage
+var numberProduct = arrayProductLocal.reduce((total, product) => total + product.Count, 0);
+document.getElementById("numberProduct").innerText = numberProduct;
+
+
+
 document.querySelectorAll('.fa.fa-plus').forEach(function(icon) {
   icon.onclick = function() {
-      event.preventDefault();
-      var productElement = icon.closest('.content');
-      var productNameElement = productElement.querySelector('.productName');
-      var productName = productNameElement.innerText;
-      var priceElement = productElement.querySelector('.price');
-      var price = priceElement.innerText;
+      event.preventDefault(); // ป้องกันการ refresh หน้า
+
+      // ดึงชื่อสินค้าและราคาออกมา
+      let productElement = icon.closest('.content'); // ค้นหา element ที่ใกล้ที่สุดที่ตรงกับ selector ที่กำหนด โดยจะค้นหาจาก element ปัจจุบันขึ้นไปตามลำดับในโครงสร้าง DOM
+      let productNameElement = productElement.querySelector('.productName');
+      let productName = productNameElement.innerText;
+      let priceElement = productElement.querySelector('.price');
+
+      let price = priceElement.innerText;
+
+
+      // ดึง image
+      let imgElement = productElement.previousElementSibling.querySelector('img'); // previousElementSibling = อ้างอิงถึง element พี่น้อง (sibling) ที่อยู่ก่อนหน้า element
+      //  imgElement = <img src="../src/indexPageImage/เหรียญขวัญถุงพระราหู.jpg" />
+      let imgSrc = imgElement.getAttribute('src');
+
+      
+
 
       console.log("Product Name: " + productName);
       console.log("Price: " + price);
-      let collectDataProduct = {ProductName: productName ,"Price" : price};
-      arrayProduct.push(collectDataProduct);
+
+
+      // ค้นหาว่าสินค้าชื่อนี้มีอยู่ใน arrayProduct แล้วหรือไม่
+      let productFound = arrayProduct.find(item => item.ProductName === productName);
+      if (productFound) {
+        // ถ้ามีอยู่แล้ว ให้เพิ่ม count
+        productFound.Count += 1;
+      } else {
+          // ถ้าไม่มี ให้สร้าง object ใหม่และเพิ่มเข้าไปใน array
+          var collectDataProduct = { ProductName: productName, Price: price.replace("฿", ""), Count: 1 , Image : imgSrc };
+          arrayProduct.push(collectDataProduct);
+      }
+
+      // เก็บ arrayProduct ไว้ใน localStorage
+      localStorage.setItem('arrayProduct', JSON.stringify(arrayProduct));
+      
+
+
+      // นับจำนวนสินค้า เพื่อเปลี่ยนตัวเลขตรงตะกร้า
       numberProduct+=1;
       document.getElementById("numberProduct").innerText = numberProduct;
+
+      
+
   };
 });
-
+  
 
 
 console.log(arrayProduct);
+
