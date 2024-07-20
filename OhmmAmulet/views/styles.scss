@@ -1199,6 +1199,7 @@ button {
 
 .btn-open {
   cursor: pointer;
+  margin-right: 20px;
 }
 
 .btn-close {
@@ -1229,3 +1230,25 @@ button {
   display: none;
 }
 
+
+.basket {
+  position: absolute;
+  transform: translateX(32rem);
+  z-index: 100;
+  box-shadow: -5px 6px 22px -9px black;
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+
+
+  #numberProduct {
+    position: absolute;
+    color: $secondary-color;
+    background-color: $primary-color;
+    transform: translateX(33px) translateY(-20px);
+    padding: 3px 4px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+
+}

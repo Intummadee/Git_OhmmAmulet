@@ -87,6 +87,31 @@ const openModalBtn = document.querySelector(".btn-open");
 openModalBtn.addEventListener("click", openModal);
 
 
-const closeModalBtn = document.querySelector(".btn-close");
-closeModalBtn.addEventListener("click", closeModal);
 
+
+
+
+var arrayProduct = []
+var numberProduct = 0;
+
+document.querySelectorAll('.fa.fa-plus').forEach(function(icon) {
+  icon.onclick = function() {
+      event.preventDefault();
+      var productElement = icon.closest('.content');
+      var productNameElement = productElement.querySelector('.productName');
+      var productName = productNameElement.innerText;
+      var priceElement = productElement.querySelector('.price');
+      var price = priceElement.innerText;
+
+      console.log("Product Name: " + productName);
+      console.log("Price: " + price);
+      let collectDataProduct = {ProductName: productName ,"Price" : price};
+      arrayProduct.push(collectDataProduct);
+      numberProduct+=1;
+      document.getElementById("numberProduct").innerText = numberProduct;
+  };
+});
+
+
+
+console.log(arrayProduct);
