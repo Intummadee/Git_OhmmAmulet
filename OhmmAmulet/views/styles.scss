@@ -403,7 +403,7 @@ a.text {
 .footer_area {
     background-color: #2c2c2c;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
     -webkit-box-align: 0 8px 48px 8px rgba(47, 91, 234, 0.175);
     box-shadow: 0 8px 48px 8px rgba(47, 91, 234, 0.175);
     padding:60px;
@@ -411,6 +411,7 @@ a.text {
     .row {
       margin-left: -25px;
       margin-right: -25px;  
+      
     }
 }
 
@@ -717,14 +718,14 @@ ol, ul {
         width: 100%;
         height: 250px;
         overflow: hidden;
-  
+        
         img {
           position: absolute;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: contain;
           transition: 0.5s;
           max-height: 400px;
         }
@@ -1126,7 +1127,6 @@ a:hover{
 
   .flex {
     display: flex;
-    background-color: pink;
     width: 70%;
     margin-right: 4rem;
 
@@ -1257,22 +1257,49 @@ button {
 
 }
 
+// @media screen and (min-width: 1024px) {  // tailwind - lg
+//   #box {
+//     background-color: lawngreen;
+//   }
+// }
+
+// @media screen and (min-width: 768px) and (max-width: 1023px) { // tailwind - md
+//   #box {
+//     background-color: black;
+//   }
+// }
+
+// @media screen and (min-width: 640px) and (max-width: 767px) { // tailwind - sm
+//   #box {
+//     background-color: cyan;
+//   }
+// }
+
+
+
+
+
 
 #list {
-  margin: 2.5rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0rem;
 
   #box {
     height: 200px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    // flex-direction: row;
+    margin-top: 1.5rem;
+    min-width: 650px;
 
     img {
       @extend %box;
       height: 200px;
       padding: 1rem;
-
+      width: 250px;
+      object-fit: contain;
     }
 
     .rightSideBox {
@@ -1283,14 +1310,18 @@ button {
       height: 200px;
 
       #priceProductBox {
-        // margin-left: 1rem;
         background-color: black;
         color: white;
         border-radius: 15px;
-        padding: 8px;
+        padding: 7px 0px;
+        display: flex;
+        justify-content: center;
         font-size: 20px;
-        display: inline-block;
+        // display: inline-block;
+        width: 80px;
+        font-size: 100%;
       }
+      
 
       #calculateDiv {
         display: flex;
@@ -1306,4 +1337,92 @@ button {
     }
   }
 
+}
+
+
+
+
+@media screen and (max-width: 639px) { // tailwind - sm
+
+  .symbols-right-center{
+    transform: translateX(20px);
+    .btn-open {
+      width: 60px;
+      .git {
+        display: none;
+      }
+    }
+  }
+
+  .basket {
+   display: block; 
+  }
+
+  #list {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  #box {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    height: 80vh;
+    img {
+      width: 40vw;
+      height: 45vh;
+      object-fit: scale-down;;
+      padding:0;
+    }
+    .rightSideBox {
+      width: 20vw;
+      h4 {
+        font-size: 13px;
+        font-weight: bold;
+      }
+      #sumPrice {
+        font-size: 20px;
+      }
+      #calculateDiv {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+.slider {
+  height: 70px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  .slide {
+    height: 70px;
+    width: 280px;
+    // background-color: rebeccapurple;
+    object-fit: contain;
+    img {
+      height: 70px;
+      
+    }
+  }
+}
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(280px * 14);
 }

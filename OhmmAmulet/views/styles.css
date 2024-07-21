@@ -377,7 +377,7 @@ a.text:hover {
 .footer_area {
   background-color: #2c2c2c;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
   -webkit-box-align: 0 8px 48px 8px rgba(47, 91, 234, 0.175);
   box-shadow: 0 8px 48px 8px rgba(47, 91, 234, 0.175);
   padding: 60px;
@@ -676,7 +676,7 @@ ol, ul {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: 0.5s;
   max-height: 400px;
 }
@@ -1033,7 +1033,6 @@ a:hover {
 }
 .modal .flex {
   display: flex;
-  background-color: pink;
   width: 70%;
   margin-right: 4rem;
 }
@@ -1145,18 +1144,23 @@ button {
 }
 
 #list {
-  margin: 2.5rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0rem;
 }
 #list #box {
   height: 200px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  margin-top: 1.5rem;
+  min-width: 650px;
 }
 #list #box img {
   height: 200px;
   padding: 1rem;
+  width: 250px;
+  object-fit: contain;
 }
 #list #box .rightSideBox {
   margin-left: 1.5rem;
@@ -1169,9 +1173,12 @@ button {
   background-color: black;
   color: white;
   border-radius: 15px;
-  padding: 8px;
+  padding: 7px 0px;
+  display: flex;
+  justify-content: center;
   font-size: 20px;
-  display: inline-block;
+  width: 80px;
+  font-size: 100%;
 }
 #list #box .rightSideBox #calculateDiv {
   display: flex;
@@ -1181,6 +1188,83 @@ button {
 }
 #list #box .rightSideBox #sumPrice {
   font-weight: bold;
+}
+
+@media screen and (max-width: 639px) {
+  .symbols-right-center {
+    transform: translateX(20px);
+  }
+  .symbols-right-center .btn-open {
+    width: 60px;
+  }
+  .symbols-right-center .btn-open .git {
+    display: none;
+  }
+  .basket {
+    display: block;
+  }
+  #list {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  #box {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    height: 80vh;
+  }
+  #box img {
+    width: 40vw;
+    height: 45vh;
+    object-fit: scale-down;
+    padding: 0;
+  }
+  #box .rightSideBox {
+    width: 20vw;
+  }
+  #box .rightSideBox h4 {
+    font-size: 13px;
+    font-weight: bold;
+  }
+  #box .rightSideBox #sumPrice {
+    font-size: 20px;
+  }
+  #box .rightSideBox #calculateDiv {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1750px);
+  }
+}
+.slider {
+  height: 70px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.slider .slide {
+  height: 70px;
+  width: 280px;
+  object-fit: contain;
+}
+.slider .slide img {
+  height: 70px;
+}
+
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: 3920px;
 }
 
 /*# sourceMappingURL=styles.css.map */

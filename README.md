@@ -19,3 +19,12 @@ npm install --save-dev sass
 
 ## Suggest Extension 
 - Live Sass Compiler
+
+
+
+
+## Ref
+- https://sass-lang.com/guide/
+- https://sass-lang.com/install/
+- https://sweetalert2.github.io/
+- https://codepen.io/kevinwitkowski/pen/MWbxNGe

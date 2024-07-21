@@ -20,6 +20,11 @@
 
   <!-- Sass -->
   <link href="styles.css" rel="stylesheet" type="text/css" />
+
+  <!-- SweetAlert2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.3/dist/sweetalert2.all.min.js"></script>
+
+
 </head>
 <body>
 
@@ -58,11 +63,13 @@
           </svg>
         </div>
 
-        <a href="https://github.com/Intummadee/Git_OhmmAmulet" target="_blank">
-          <svg style="margin-left: 20px;" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M17 2.125C8.78555 2.125 2.125 8.95156 2.125 17.3785C2.125 24.1188 6.38828 29.8297 12.2984 31.8484C13.0422 31.9879 13.3145 31.5164 13.3145 31.1113C13.3145 30.7461 13.3012 29.7898 13.2945 28.5148C9.15742 29.4379 8.28086 26.4695 8.28086 26.4695C7.60352 24.7098 6.62734 24.2383 6.62734 24.2383C5.2793 23.2887 6.72695 23.3086 6.72695 23.3086C8.22109 23.4148 9.00469 24.8824 9.00469 24.8824C10.3328 27.2133 12.4844 26.5426 13.3344 26.1508C13.4672 25.168 13.8523 24.4906 14.2773 24.1121C10.977 23.727 7.50391 22.4188 7.50391 16.575C7.50391 14.9082 8.08164 13.5469 9.03125 12.4844C8.87852 12.0992 8.36719 10.5453 9.17734 8.44687C9.17734 8.44687 10.4258 8.03516 13.268 10.0074C14.4566 9.66875 15.725 9.50273 16.9934 9.49609C18.2551 9.50273 19.5301 9.66875 20.7188 10.0074C23.5609 8.03516 24.8027 8.44687 24.8027 8.44687C25.6129 10.5453 25.1016 12.0992 24.9488 12.4844C25.8984 13.5535 26.4762 14.9148 26.4762 16.575C26.4762 22.432 22.9965 23.7203 19.6828 24.0988C20.2141 24.5703 20.6922 25.5 20.6922 26.9211C20.6922 28.9598 20.6723 30.6066 20.6723 31.1047C20.6723 31.5098 20.9379 31.9879 21.6949 31.8352C27.6184 29.823 31.875 24.1121 31.875 17.3785C31.875 8.95156 25.2145 2.125 17 2.125Z" fill="black"/>
-          </svg>
-        </a>
+        <div class="btn-open">
+          <a class="git" href="https://github.com/Intummadee/Git_OhmmAmulet" target="_blank">
+            <svg style="margin-left: 20px;" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M17 2.125C8.78555 2.125 2.125 8.95156 2.125 17.3785C2.125 24.1188 6.38828 29.8297 12.2984 31.8484C13.0422 31.9879 13.3145 31.5164 13.3145 31.1113C13.3145 30.7461 13.3012 29.7898 13.2945 28.5148C9.15742 29.4379 8.28086 26.4695 8.28086 26.4695C7.60352 24.7098 6.62734 24.2383 6.62734 24.2383C5.2793 23.2887 6.72695 23.3086 6.72695 23.3086C8.22109 23.4148 9.00469 24.8824 9.00469 24.8824C10.3328 27.2133 12.4844 26.5426 13.3344 26.1508C13.4672 25.168 13.8523 24.4906 14.2773 24.1121C10.977 23.727 7.50391 22.4188 7.50391 16.575C7.50391 14.9082 8.08164 13.5469 9.03125 12.4844C8.87852 12.0992 8.36719 10.5453 9.17734 8.44687C9.17734 8.44687 10.4258 8.03516 13.268 10.0074C14.4566 9.66875 15.725 9.50273 16.9934 9.49609C18.2551 9.50273 19.5301 9.66875 20.7188 10.0074C23.5609 8.03516 24.8027 8.44687 24.8027 8.44687C25.6129 10.5453 25.1016 12.0992 24.9488 12.4844C25.8984 13.5535 26.4762 14.9148 26.4762 16.575C26.4762 22.432 22.9965 23.7203 19.6828 24.0988C20.2141 24.5703 20.6922 25.5 20.6922 26.9211C20.6922 28.9598 20.6723 30.6066 20.6723 31.1047C20.6723 31.5098 20.9379 31.9879 21.6949 31.8352C27.6184 29.823 31.875 24.1121 31.875 17.3785C31.875 8.95156 25.2145 2.125 17 2.125Z" fill="black"/>
+            </svg>
+          </a>
+        </div>
           
       </div>
     </div>
@@ -104,9 +111,13 @@
           <div style="padding-left: 1%;" id="thai">สรุปการสั่งสินค้า</div>
         </div>
 
-        <div style="width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <div id="buttonTopBasket" style="width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
           <h1>Total Bill : <span id="CountPriceBaht"></span> Baht</h1>
-          <button id="clearCart" type="button" class="btn btn-danger">Clear Cart</button>
+          <div style="display: flex; flex-direction: row; width: 100%; justify-content: space-evenly; margin-top: 1rem;">
+            <button id="clearCart" type="button" class="btn btn-danger">Clear Cart</button>
+            <button id="checkOut" type="button" class="btn btn-success">Check Out</button>
+            
+          </div>
         </div>
 
         <div id="list" style="width: 100%; display: flex; flex-direction: column;">
@@ -118,7 +129,8 @@
               <img src="../src/japanPageImage/7เทพ.jpg" >
             </div>
             <div class="rightSideBox">
-              <h4 id="nameProductBox">เหรียญขวัญถุงพระราหู  <span id="priceProductBox">159 Baht</span> </h4>
+              <h4 id="nameProductBox">เหรียญขวัญถุงพระราหู</h4>
+              <h4 id="priceProductBox">159 Baht</h4>
               <div id="calculateDiv">
                 <div class="minus">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -143,11 +155,14 @@
 
 
         </div>
-
-
-        <div class="grid col-xs-12 col-sm-12 col-lg-12 title_stone">
-          <div style="padding-left: 1%;" id="thai">สั่งสินค้า</div>
+        <div style="display: flex; width: 100%; justify-content: center; margin: 3rem 0rem;">
+          <button id="BackHome" type="button" class="btn btn-dark">Back Home</button>
         </div>
+
+
+        <!-- <div class="grid col-xs-12 col-sm-12 col-lg-12 title_stone">
+          <div style="padding-left: 1%;" id="thai">สั่งสินค้า</div>
+        </div> -->
 
 
 
