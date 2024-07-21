@@ -9,12 +9,15 @@
 <a href="https://github.com/Ileriayo/markdown-badges"><img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white" /></a>
 <a href="https://github.com/Ileriayo/markdown-badges"><img src="https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7" /></a>
 <a href="https://github.com/Ileriayo/markdown-badges"><img src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white" /></a>
- <h5> WEB TECHNOLOGY | 2rd Year Term 1/2023 </h5>
  <h3>▶ Visit : <a href="https://ohmm-amulet-shop.netlify.app/" target="_blank">Ohmm-Amulet-Shop</a> </h3>
+ <h5> WEB TECHNOLOGY | 2rd Year Term 1/2023 </h5>
 </div>
 
 <img width="100%" height="60%" src="https://github.com/Intummadee/Ohmm-Amulet-Shop/blob/main/OhmmAmulet/src/imageHomePage.png?raw=true">
 
+> [!IMPORTANT]
+> ## Ref 
+> ```https://www.mcdonalds.co.th/mcDelivery/category/burger```
 
 ## Getting Started
 To get started, follow these steps:
@@ -23,18 +26,21 @@ To get started, follow these steps:
 3. Install dependencies using `npm install`
 4. Run the app using `npm start`
 
+---
+
 ## Tech Stack :
 - **Language:** HTML, CSS, Javascript, Bootstrap,  
 - **Database:** Local Storage
 - **Version Control:** Git and GitHub
 - **Code Editor and tools**: VS Code
 
-## Ref : https://www.mcdonalds.co.th/mcDelivery/category/burger
+---
 
-## How to Run
-- Sasss : IMPORTANT! Browsers can only read CSS, not SCSS directly, so you must always compile SCSS to CSS first and link the CSS file in your HTML file.
+## 🍁 How to Run
+- **Sasss** : IMPORTANT! Browsers can only read CSS, not SCSS directly, so you must always compile SCSS to CSS first and link the CSS file in your HTML file.
 ```npx sass --watch views/styles.scss:views/styles.css```
 
+---
 
 <details> 
   <summary><h2> 🍹 Dependency </h2></summary> 
@@ -45,26 +51,23 @@ To get started, follow these steps:
   </ul>
 
 </details>
-```
-npm install -g sass 
-npm install --save-dev sass
-```
 
+---
 
-
-## Suggest Extension 
+## ⛱ Suggest Extension 
 - Live Sass Compiler
-
-
-
 
 ---
 
 ## Ref
 &emsp; https://sass-lang.com/guide/
+
 &emsp; https://sass-lang.com/install/
+
 &emsp; https://sweetalert2.github.io/
+
 &emsp; https://codepen.io/kevinwitkowski/pen/MWbxNGe
+
 &emsp; https://sweetalert2.github.io/
 
 
