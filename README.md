@@ -10,7 +10,7 @@
 <a href="https://github.com/Ileriayo/markdown-badges"><img src="https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7" /></a>
 <a href="https://github.com/Ileriayo/markdown-badges"><img src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white" /></a>
  <h3>▶ Visit : <a href="https://ohmm-amulet-shop.netlify.app/" target="_blank">Ohmm-Amulet-Shop</a> </h3>
- <h5> WEB TECHNOLOGY | 2rd Year Term 1/2023 </h5>
+ <h5> WEB TECHNOLOGY | 2rd Year Term 1/2022 </h5>
 </div>
 
 <img width="100%" height="60%" src="https://github.com/Intummadee/Ohmm-Amulet-Shop/blob/main/OhmmAmulet/src/imageHomePage.png?raw=true">
