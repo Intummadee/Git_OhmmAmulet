@@ -21,7 +21,7 @@
 
 ## Getting Started
 To get started, follow these steps:
-1. Clone this repository using `git clone https://github.com/Intummadee/CardCheck.git`
+1. Clone this repository using `git clone https://github.com/Intummadee/Ohmm-Amulet-Shop.git`
 2. To navigate to a directory named OhmmAmulet using `cd OhmmAmulet`
 3. Install dependencies using `npm install`
 4. Run the app using `npm start`
