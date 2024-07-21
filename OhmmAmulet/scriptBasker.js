@@ -102,18 +102,34 @@ document.getElementById("CountPriceBaht").innerText = total_Bill;
 
 
 document.getElementById("clearCart").addEventListener("click" , ()=>{
-    arrayProduct = []
-    localStorage.setItem('arrayProduct', JSON.stringify(arrayProduct));
-    // ถ้า clear cart หมายเลขตรงไอคอน ตะกร้าก็เหลือ 0
-    document.getElementById("numberProduct").innerText = "0";
-    const list = document.getElementById('list'); // ลบ box ใน list
-    while (list.firstChild) { // ตรวจสอบว่ามีโหนดลูกตัวแรกอยู่หรือไม่.
-        list.removeChild(list.firstChild);
-    }
-    document.getElementById('list').innerText = 'Your basket is empty.';
-    document.getElementById("CountPriceBaht").innerText = "0";
 
-
+    Swal.fire({
+        title: "Are you sure?",
+        text: "To Clear All Product!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, clear it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+            arrayProduct = []
+            localStorage.setItem('arrayProduct', JSON.stringify(arrayProduct));
+            // ถ้า clear cart หมายเลขตรงไอคอน ตะกร้าก็เหลือ 0
+            document.getElementById("numberProduct").innerText = "0";
+            const list = document.getElementById('list'); // ลบ box ใน list
+            while (list.firstChild) { // ตรวจสอบว่ามีโหนดลูกตัวแรกอยู่หรือไม่.
+                list.removeChild(list.firstChild);
+            }
+            document.getElementById('list').innerText = 'Your basket is empty.';
+            document.getElementById("CountPriceBaht").innerText = "0";
+          Swal.fire({
+            title: "Success!",
+            icon: "success"
+          });
+        }
+      });
+    
 
 
 
