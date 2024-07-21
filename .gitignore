@@ -2,3 +2,12 @@
 *.css.map
 *.sass.map
 *.scss.map
+
+
+
+public/
+*.log
+.firebaserc
+firebase.json
+
+
