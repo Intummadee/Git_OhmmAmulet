@@ -68,7 +68,7 @@ To get started, follow these steps:
 
 &emsp; https://codepen.io/kevinwitkowski/pen/MWbxNGe
 
-&emsp; https://sweetalert2.github.io/
+
 
 
 <br>
