@@ -1,7 +1,7 @@
 
  
 <div align="center">
- <h1>Ohmm-Amulet-Shop <img src="https://64.media.tumblr.com/65a34a47a25662c619588f434def7221/127eb2e64f13cf30-67/s1280x1920/d66f676fd01adaae32172d4e76278803ec4c5430.gif" width="70px">
+ <h1>Ohmm-Amulet-Shop <img src="https://i.pinimg.com/originals/6e/1d/1d/6e1d1d7944fa36e6079a644eab4dbc47.gif" width="70px">
  </h1>
 <a href="https://github.com/Ileriayo/markdown-badges"><img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" /></a>
 <a href="https://github.com/Ileriayo/markdown-badges"><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" /></a>
