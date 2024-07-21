@@ -158,11 +158,3 @@ document.querySelectorAll('.fa.fa-plus').forEach(function(icon) {
   
 
 
-console.log(arrayProduct);
-
-
-
-
-
-
-

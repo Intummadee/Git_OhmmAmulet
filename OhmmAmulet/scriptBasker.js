@@ -284,44 +284,5 @@ document.getElementById("checkOut").addEventListener("click", () => {
     }
     else{
         Swal.fire("Your basket is empty!! Pls Back To Home and add our Products.");
-        // alert("Your basket is empty!! Pls Back To Home and add our Products.");
-        // Swal.fire({
-        //     title: 'Error!',
-        //     text: 'Do you want to continue',
-        //     icon: 'error',
-        //     confirmButtonText: 'Cool'
-        //   })
     }
 });
-
-
-
-// function askForLocation() {
-//     if (navigator.geolocation) {
-//         navigator.geolocation.getCurrentPosition(
-//             function(position) {
-//                 // ฟังก์ชั่นที่เรียกเมื่อได้ข้อมูลตำแหน่ง
-//                 var latitude = position.coords.latitude;
-//                 var longitude = position.coords.longitude;
-//                 console.log("Latitude: " + latitude);
-//                 console.log("Longitude: " + longitude);
-//                 // คุณสามารถทำสิ่งต่างๆ กับข้อมูลตำแหน่งที่นี่
-//             },
-//             function(error) {
-//                 // ฟังก์ชั่นที่เรียกเมื่อไม่สามารถรับข้อมูลตำแหน่งได้
-//                 console.error("Error getting location: ", error);
-//             }
-//         );
-//     } else {
-//         console.error("Geolocation is not supported by this browser.");
-//     }
-// }
-
-
-
-
-// // เรียกใช้ฟังก์ชั่นขอสิทธิ์เข้าถึงตำแหน่งเมื่อหน้าเว็บโหลด
-// window.onload = askForLocation;
-
-
-
